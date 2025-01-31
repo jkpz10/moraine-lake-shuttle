@@ -8,11 +8,11 @@ export function PartnersSection() {
       logo: '/logo/get-your-guide.webp',
       description: 'Global booking platform for travel experiences',
     },
-    {
-      name: 'Checkfront',
-      logo: '/logo/Checkfront.webp',
-      description: 'Leading booking management system',
-    },
+    // {
+    //   name: 'Checkfront',
+    //   logo: '/logo/Checkfront.webp',
+    //   description: 'Leading booking management system',
+    // },
   ];
 
   return (
