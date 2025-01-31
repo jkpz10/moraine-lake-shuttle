@@ -1,4 +1,3 @@
-import { ThemeToggle } from '@/components/theme-toggle';
 import { DepartureScheduleSection } from '@/screens/home/components/departure-schedule/departure-schedule-section';
 import { PartnersSection } from '@/screens/home/components/partners-section';
 import { ServiceSection } from '@/screens/home/components/service-section';
@@ -7,9 +6,9 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       {/* Theme toggle in the top-right corner */}
-      <div className="absolute top-4 right-4 z-50">
+      {/* <div className="absolute top-4 right-4 z-50">
         <ThemeToggle />
-      </div>
+      </div> */}
 
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center">
