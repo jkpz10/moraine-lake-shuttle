@@ -8,15 +8,16 @@ export function PartnersSection() {
       logo: '/logo/get-your-guide.webp',
       description: 'Global booking platform for travel experiences',
     },
-    // {
-    //   name: 'Checkfront',
-    //   logo: '/logo/Checkfront.webp',
-    //   description: 'Leading booking management system',
-    // },
+    {
+      name: 'PeekPro',
+      logo: '/logo/peek-pro.svg',
+      description:
+        'The world’s most advanced operating system for experiences & attractions',
+    },
   ];
 
   return (
-    <section className="py-24 px-4 md:px-6 bg-background">
+    <section className="py-24 px-4 md:px-6 bg-[#FEFCFB]">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold mb-4">Trusted Booking Partners</h2>
@@ -29,7 +30,7 @@ export function PartnersSection() {
           {partners.map((partner) => (
             <Card
               key={partner.name}
-              className="border-none bg-muted/50 backdrop-blur-sm"
+              className="border-none bg-white shadow-md transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-105 hover:bg-gray-50"
             >
               <CardContent className="flex flex-col items-center justify-center p-6 h-full">
                 <div className="relative w-48 h-24 mb-6">

@@ -1,5 +1,8 @@
+import { BookingModal } from '@/components/booking-modal';
 import { DepartureScheduleSection } from '@/screens/home/components/departure-schedule/departure-schedule-section';
 import { PartnersSection } from '@/screens/home/components/partners-section';
+import { PriceSection } from '@/screens/home/components/price-section';
+import { RouteMapSection } from '@/screens/home/components/route-map-section';
 import { ServiceSection } from '@/screens/home/components/service-section';
 
 export default function Home() {
@@ -32,15 +35,21 @@ export default function Home() {
           <p className="text-xl md:text-2xl mb-10 max-w-2xl mx-auto font-light">
             Explore the Lakes not the Parking Lot
           </p>
-          {/* <BookingModal /> */}
+          <BookingModal />
         </div>
       </section>
 
       {/* Features Section */}
       <ServiceSection />
 
+      {/* Routes Section */}
+      <RouteMapSection />
+
       {/* Departure Schedule Section */}
       <DepartureScheduleSection />
+
+      {/* Price Section */}
+      <PriceSection />
 
       {/* Partners Section */}
       <PartnersSection />
