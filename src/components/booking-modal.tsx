@@ -33,7 +33,7 @@ export function BookingModal({
         <DialogHeader className="py-4">
           <DialogTitle>Book Your Shuttle</DialogTitle>
         </DialogHeader>
-        <div className="h-full">modal booking widget here</div>
+        <div className="h-full">Coming Soon!</div>
       </DialogContent>
     </Dialog>
   );

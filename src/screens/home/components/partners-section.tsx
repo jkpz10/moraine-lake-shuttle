@@ -8,12 +8,12 @@ export function PartnersSection() {
       logo: '/logo/get-your-guide.webp',
       description: 'Global booking platform for travel experiences',
     },
-    {
-      name: 'PeekPro',
-      logo: '/logo/peek-pro.svg',
-      description:
-        'The world’s most advanced operating system for experiences & attractions',
-    },
+    // {
+    //   name: 'PeekPro',
+    //   logo: '/logo/peek-pro.svg',
+    //   description:
+    //     'The world’s most advanced operating system for experiences & attractions',
+    // },
   ];
 
   return (
@@ -26,7 +26,7 @@ export function PartnersSection() {
             provide you with a seamless and secure reservation experience.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 gap-8">
           {partners.map((partner) => (
             <Card
               key={partner.name}
