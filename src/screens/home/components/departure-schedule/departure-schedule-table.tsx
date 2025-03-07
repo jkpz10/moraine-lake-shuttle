@@ -31,10 +31,10 @@ export function DepartureScheduleTable({
               Ski Gondola
             </TableHead>
             <TableHead className="w-[33%] font-medium bg-[#001F54] text-[#FEFCFB] p-3">
-              Lake Louise
+              {reversed ? 'Moraine Lake' : 'Lake Louise'}
             </TableHead>
             <TableHead className="w-[33%] font-medium bg-[#001F54] text-[#FEFCFB] rounded-tr-xl p-3">
-              Moraine Lake
+              {reversed ? 'Lake Louise' : 'Moraine Lake'}
             </TableHead>
           </TableRow>
         </TableHeader>
