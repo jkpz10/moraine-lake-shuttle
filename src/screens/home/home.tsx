@@ -1,4 +1,5 @@
 import { BookingModal } from '@/components/booking-modal';
+import FareHarborEmbed from '@/components/fare-harbor-embed';
 import { DepartureScheduleSection } from '@/screens/home/components/departure-schedule/departure-schedule-section';
 import { PartnersSection } from '@/screens/home/components/partners-section';
 import { PriceSection } from '@/screens/home/components/price-section';
@@ -38,6 +39,14 @@ export default function Home() {
           <BookingModal />
         </div>
       </section>
+
+      {/* <section className="py-32 px-4 md:px-6 bg-[#FEFCFB] backdrop-blur-sm">
+        <FareHarborEmbed type="items" flowId="1343456" />
+      </section>
+
+      <section className="py-32 px-4 md:px-6 bg-[#FEFCFB] backdrop-blur-sm">
+        <FareHarborEmbed type="calendar" />
+      </section> */}
 
       {/* Features Section */}
       <ServiceSection />
