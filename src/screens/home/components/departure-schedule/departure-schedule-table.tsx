@@ -1,3 +1,5 @@
+'use client';
+
 import {
   Table,
   TableBody,
@@ -22,6 +24,11 @@ export function DepartureScheduleTable({
 }: ScheduleTableProps) {
   const shuttleNumbers = Array.from(new Set(data.map((item) => item.shuttle)));
 
+  const route1 =
+    'https://fareharbor.com/embeds/book/morainelakelouise/items/611572/?full-items=yes&flow=1343456';
+  const route2 =
+    'https://fareharbor.com/embeds/book/morainelakelouise/items/611579/?full-items=yes&flow=1343456';
+
   return (
     <div className="space-y-4">
       <Table className="overflow-hidden">
@@ -39,24 +46,30 @@ export function DepartureScheduleTable({
           </TableRow>
         </TableHeader>
         <TableBody>
-          {data.map((schedule, index) => (
-            <TableRow
-              key={index}
-              className={`
+          {data.map((schedule, index) => {
+            const href = reversed ? route2 : route1;
+            return (
+              <TableRow
+                key={index}
+                onClick={() => window.open(href, '_blank')}
+                className={`
                 ${index % 2 === 0 ? colors[0] : colors[1] ?? ''}
                 transition-all duration-300 ease-in-out 
                 hover:bg-gray-100 hover:shadow-sm hover:scale-[1.02] cursor-pointer
               `}
-            >
-              <TableCell className="font-mono">{schedule.skiGondola}</TableCell>
-              <TableCell className="font-mono">
-                {reversed ? schedule.moraineLake : schedule.lakeLouise}
-              </TableCell>
-              <TableCell className="font-mono">
-                {reversed ? schedule.lakeLouise : schedule.moraineLake}
-              </TableCell>
-            </TableRow>
-          ))}
+              >
+                <TableCell className="font-mono">
+                  {schedule.skiGondola}
+                </TableCell>
+                <TableCell className="font-mono">
+                  {reversed ? schedule.moraineLake : schedule.lakeLouise}
+                </TableCell>
+                <TableCell className="font-mono">
+                  {reversed ? schedule.lakeLouise : schedule.moraineLake}
+                </TableCell>
+              </TableRow>
+            );
+          })}
         </TableBody>
       </Table>
       <div className="flex flex-wrap gap-2">
