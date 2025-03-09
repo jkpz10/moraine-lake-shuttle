@@ -42,6 +42,8 @@ export default function RootLayout({
           <Navigation />
           {children}
         </ThemeProvider>
+
+        <script src="https://fareharbor.com/embeds/api/v1/?autolightframe=yes" />
       </body>
     </html>
   );
