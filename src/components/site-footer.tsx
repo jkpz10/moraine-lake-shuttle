@@ -1,6 +1,7 @@
 'use client';
 
 import { Facebook, Instagram, Mail, Phone, Twitter } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 // Social media link props type
@@ -46,7 +47,7 @@ function FooterHeading({ children }: { children: React.ReactNode }) {
   return <h3 className="text-lg font-semibold mb-4">{children}</h3>;
 }
 
-const SiteFooter = () => {
+export function SiteFooter() {
   const currentYear = new Date().getFullYear();
   // Social links data
   const socialLinks = [
@@ -68,17 +69,25 @@ const SiteFooter = () => {
   ];
 
   return (
-    <footer className="border-t bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container py-12 px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="bg-[#f0f7ff] dark:bg-[#1a2b42]">
+      <div className="w-full py-12 px-4 md:px-6">
+        <div className="flex flex-col md:flex-row gap-8">
           {/* Logo and Copyright */}
-          <div className="flex flex-col space-y-4">
+          <div className="flex flex-col justify-center items-start space-y-4 flex-1">
             <Link
               href="/"
-              className="flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-primary rounded-md"
+              className="flex items-center focus:outline-none focus:ring-2 focus:ring-primary rounded-md"
               tabIndex={0}
             >
-              <span className="font-bold text-xl">Moraine Shuttle</span>
+              <div className="relative h-28 w-52">
+                <Image
+                  src="/logo/mlls-logo.png"
+                  alt="Moraine Lake Louise Shuttle Logo"
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
             </Link>
             <p className="text-sm text-muted-foreground">
               Copyright &copy; {currentYear} Moraine Lake Louise Shuttle. All
@@ -87,7 +96,7 @@ const SiteFooter = () => {
           </div>
 
           {/* Contact Information */}
-          <div className="flex flex-col space-y-4">
+          <div className="flex flex-col justify-center items-center space-y-4 flex-1">
             <FooterHeading>Contact Us</FooterHeading>
             <ContactItem
               icon={<Phone className="h-4 w-4 text-muted-foreground" />}
@@ -107,7 +116,7 @@ const SiteFooter = () => {
           </div>
 
           {/* Social Media */}
-          <div className="flex flex-col space-y-4">
+          <div className="flex flex-col justify-center items-center space-y-4 flex-1">
             <FooterHeading>Follow Us</FooterHeading>
             <div className="flex space-x-4">
               {socialLinks.map(link => (
@@ -124,6 +133,4 @@ const SiteFooter = () => {
       </div>
     </footer>
   );
-};
-
-export default SiteFooter;
+}
