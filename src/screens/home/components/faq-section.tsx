@@ -13,7 +13,7 @@ export function FaqSection() {
       id="faq"
       className="py-24 px-4 md:px-6 bg-gradient-to-b from-[#FEFCFB] to-[#F7F7F7]"
     >
-      <div className="container mx-auto">
+      <div className="w-full mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-[#0A1128]">
           Frequently Asked Questions
         </h2>

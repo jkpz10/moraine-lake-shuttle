@@ -19,7 +19,7 @@ export function PartnersSection() {
 
   return (
     <section className="py-24 px-4 md:px-6 bg-[#FEFCFB]">
-      <div className="container mx-auto">
+      <div className="w-full mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold mb-4">Trusted Booking Partners</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
