@@ -1,16 +1,17 @@
 'use client';
 
-import * as React from 'react';
-import Link from 'next/link';
 import { Menu } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
+import * as React from 'react';
 
-import { cn } from '@/lib/utils';
+import { BookingModal } from '@/components/booking-modal';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { BookingModal } from '@/components/booking-modal';
-import Image from 'next/image';
 
-export function Navigation() {
+import { cn } from '@/lib/utils';
+
+const Navigation = () => {
   const [isScrolled, setIsScrolled] = React.useState(false);
   const [isOpen, setIsOpen] = React.useState(false);
 
@@ -19,6 +20,7 @@ export function Navigation() {
       setIsScrolled(window.scrollY > 500);
     };
     window.addEventListener('scroll', handleScroll);
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -58,21 +60,21 @@ export function Navigation() {
           <nav className="hidden md:flex items-center justify-end space-x-6">
             <Link
               href="#route"
-              onClick={(e) => smoothScroll(e, '#route')}
+              onClick={e => smoothScroll(e, '#route')}
               className="text-sm font-medium transition-colors hover:text-primary"
             >
               Routes
             </Link>
             <Link
               href="#schedule"
-              onClick={(e) => smoothScroll(e, '#schedule')}
+              onClick={e => smoothScroll(e, '#schedule')}
               className="text-sm font-medium transition-colors hover:text-primary"
             >
               Schedule
             </Link>
             <Link
               href="#price"
-              onClick={(e) => smoothScroll(e, '#price')}
+              onClick={e => smoothScroll(e, '#price')}
               className="text-sm font-medium transition-colors hover:text-primary"
             >
               Price
@@ -91,21 +93,21 @@ export function Navigation() {
                 <nav className="flex flex-col space-y-4 mt-6">
                   <Link
                     href="#route"
-                    onClick={(e) => smoothScroll(e, '#route')}
+                    onClick={e => smoothScroll(e, '#route')}
                     className="text-sm font-medium transition-colors hover:text-primary"
                   >
                     Routes
                   </Link>
                   <Link
                     href="#schedule"
-                    onClick={(e) => smoothScroll(e, '#schedule')}
+                    onClick={e => smoothScroll(e, '#schedule')}
                     className="text-sm font-medium transition-colors hover:text-primary"
                   >
                     Schedule
                   </Link>
                   <Link
                     href="#price"
-                    onClick={(e) => smoothScroll(e, '#price')}
+                    onClick={e => smoothScroll(e, '#price')}
                     className="text-sm font-medium transition-colors hover:text-primary"
                   >
                     Price
@@ -121,4 +123,6 @@ export function Navigation() {
       </div>
     </header>
   );
-}
+};
+
+export default Navigation;

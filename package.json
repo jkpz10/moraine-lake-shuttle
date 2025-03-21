@@ -6,7 +6,10 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "prepare": "husky"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.5",
@@ -29,8 +32,22 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.1.6",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-import-helpers": "^2.0.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.0",
     "postcss": "^8",
+    "prettier": "^3.5.3",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,css}": [
+      "prettier --write"
+    ]
   }
 }

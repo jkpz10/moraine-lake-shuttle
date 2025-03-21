@@ -1,5 +1,5 @@
 import { BookingModal } from '@/components/booking-modal';
-import FareHarborEmbed from '@/components/fare-harbor-embed';
+
 import { DepartureScheduleSection } from '@/screens/home/components/departure-schedule/departure-schedule-section';
 import { PartnersSection } from '@/screens/home/components/partners-section';
 import { PriceSection } from '@/screens/home/components/price-section';

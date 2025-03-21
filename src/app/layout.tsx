@@ -2,8 +2,10 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { Inter } from 'next/font/google';
+
+import Navigation from '@/components/navigation';
+import SiteFooter from '@/components/site-footer';
 import { ThemeProvider } from '@/components/theme-provider';
-import { Navigation } from '@/components/navigation';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -41,9 +43,13 @@ export default function RootLayout({
         >
           <Navigation />
           {children}
+          <SiteFooter />
         </ThemeProvider>
 
-        <script src="https://fareharbor.com/embeds/api/v1/?autolightframe=yes" />
+        <script
+          src="https://fareharbor.com/embeds/api/v1/?autolightframe=yes"
+          async
+        />
       </body>
     </html>
   );

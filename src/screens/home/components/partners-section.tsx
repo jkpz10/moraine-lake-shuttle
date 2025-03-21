@@ -1,5 +1,6 @@
-import { Card, CardContent } from '@/components/ui/card';
 import Image from 'next/image';
+
+import { Card, CardContent } from '@/components/ui/card';
 
 export function PartnersSection() {
   const partners = [
@@ -8,12 +9,12 @@ export function PartnersSection() {
       logo: '/logo/get-your-guide.webp',
       description: 'Global booking platform for travel experiences',
     },
-    // {
-    //   name: 'PeekPro',
-    //   logo: '/logo/peek-pro.svg',
-    //   description:
-    //     'The world’s most advanced operating system for experiences & attractions',
-    // },
+    {
+      name: 'Tripadvisor',
+      logo: '/logo/tripadvisor-logo.svg',
+      description:
+        'Tripadvisor, the world&apos;s largest travel platform*, helps 463 million travelers each month** make every trip their best trip',
+    },
   ];
 
   return (
@@ -26,11 +27,11 @@ export function PartnersSection() {
             provide you with a seamless and secure reservation experience.
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-8">
-          {partners.map((partner) => (
+        <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-8">
+          {partners.map(partner => (
             <Card
               key={partner.name}
-              className="border-none bg-white shadow-md transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-105 hover:bg-gray-50"
+              className="border-none bg-white shadow-md transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-105 hover:bg-gray-50 w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)]"
             >
               <CardContent className="flex flex-col items-center justify-center p-6 h-full">
                 <div className="relative w-48 h-24 mb-6">
