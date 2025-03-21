@@ -35,7 +35,7 @@ export function ServiceSection() {
   ];
 
   return (
-    <section className="py-32 px-4 md:px-6 bg-[#FEFCFB] backdrop-blur-sm">
+    <section className="py-24 px-4 md:px-6 bg-[#FEFCFB] backdrop-blur-sm">
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold text-center mb-12">
           Why Choose Our Shuttle Service

@@ -4,7 +4,7 @@ import './globals.css';
 import { Inter } from 'next/font/google';
 
 import Navigation from '@/components/navigation';
-import SiteFooter from '@/components/site-footer';
+import { SiteFooter } from '@/components/site-footer';
 import { ThemeProvider } from '@/components/theme-provider';
 
 const geistSans = Geist({

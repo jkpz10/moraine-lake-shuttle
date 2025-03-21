@@ -1,8 +1,9 @@
 import { BookingModal } from '@/components/booking-modal';
 
 import { DepartureScheduleSection } from '@/screens/home/components/departure-schedule/departure-schedule-section';
+import { FaqSection } from '@/screens/home/components/faq-section';
 import { PartnersSection } from '@/screens/home/components/partners-section';
-import { PriceSection } from '@/screens/home/components/price-section';
+// import { PriceSection } from '@/screens/home/components/price-section';
 import { RouteMapSection } from '@/screens/home/components/route-map-section';
 import { ServiceSection } from '@/screens/home/components/service-section';
 
@@ -51,17 +52,20 @@ export default function Home() {
       {/* Features Section */}
       <ServiceSection />
 
-      {/* Routes Section */}
-      <RouteMapSection />
-
       {/* Departure Schedule Section */}
       <DepartureScheduleSection />
 
-      {/* Price Section */}
-      <PriceSection />
+      {/* Routes Section */}
+      <RouteMapSection />
+
+      {/* Price Section
+      <PriceSection /> */}
 
       {/* Partners Section */}
       <PartnersSection />
+
+      {/* FAQ Section */}
+      <FaqSection />
     </main>
   );
 }
