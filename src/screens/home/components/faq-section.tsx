@@ -11,7 +11,7 @@ export function FaqSection() {
   return (
     <section
       id="faq"
-      className="py-24 px-4 md:px-6 bg-gradient-to-b from-[#FEFCFB] to-[#F7F7F7]"
+      className="py-24 px-4 md:px-6 bg-gradient-to-b bg-[#F5F7FA]"
     >
       <div className="w-full mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-[#0A1128]">

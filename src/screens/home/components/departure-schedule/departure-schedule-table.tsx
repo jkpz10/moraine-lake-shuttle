@@ -10,7 +10,7 @@ import {
   TableRow,
 } from '@/components/ui/table';
 
-import type { ScheduleTime } from '@/screens/home/departure-schedule';
+import type { ScheduleTime } from '@/screens/home/components/departure-schedule';
 
 interface ScheduleTableProps {
   data: ScheduleTime[];
@@ -31,7 +31,7 @@ export function DepartureScheduleTable({
     'https://fareharbor.com/embeds/book/morainelakelouise/items/611579/?full-items=yes&flow=1343456';
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 shadow-md rounded-xl pt-0 pb-4 bg-white">
       <Table className="overflow-hidden">
         <TableHeader>
           <TableRow>
@@ -74,7 +74,7 @@ export function DepartureScheduleTable({
           })}
         </TableBody>
       </Table>
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap gap-2 ml-2">
         {shuttleNumbers.map((number, index) => (
           <Badge
             key={number}

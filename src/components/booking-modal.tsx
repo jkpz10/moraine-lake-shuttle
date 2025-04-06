@@ -12,7 +12,7 @@ export function BookingModal({
   title = 'Book Your Shuttle',
 }: BookingModalProps) {
   return (
-    <Button className="text-lg bg-[#034078] text-white rounded-lg shadow-md transition-all duration-300 ease-in-out hover:bg-[#001F54] hover:scale-105 hover:shadow-lg">
+    <Button className="bg-[#F2994A] hover:bg-[#F2994A]/90 text-white shadow-md transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
       <Link href="https://fareharbor.com/embeds/book/morainelakelouise/?full-items=yes">
         {title}
       </Link>
