@@ -117,7 +117,7 @@ const Navigation = () => {
             </Sheet>
           </div>
           <div className={cn('flex items-center', isOpen && 'hidden')}>
-            <BookingModal title="Book" />
+            <BookingModal title="Book Now" />
           </div>
         </div>
       </div>
