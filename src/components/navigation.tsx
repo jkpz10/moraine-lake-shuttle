@@ -7,9 +7,14 @@ import * as React from 'react';
 
 import { BookingModal } from '@/components/booking-modal';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import {
+  Sheet,
+  SheetContent,
+  SheetTitle,
+  SheetTrigger,
+} from '@/components/ui/sheet';
 
-import { cn } from '@/lib/utils';
+import { cn, smoothScroll } from '@/lib/utils';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = React.useState(false);
@@ -23,17 +28,6 @@ const Navigation = () => {
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const smoothScroll = (
-    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
-    id: string
-  ) => {
-    e.preventDefault();
-    const section = document.querySelector(id);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <header
@@ -73,23 +67,24 @@ const Navigation = () => {
               Schedule
             </Link>
             <Link
-              href="#price"
-              onClick={e => smoothScroll(e, '#price')}
+              href="#faq"
+              onClick={e => smoothScroll(e, '#faq')}
               className="text-sm font-medium transition-colors hover:text-primary"
             >
-              Price
+              FAQ
             </Link>
           </nav>
           {/* Mobile Navigation */}
           <div className="md:hidden">
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
-              <SheetTrigger asChild>
+              <SheetTrigger>
                 <Button variant="ghost" size="icon" className="md:hidden">
                   <Menu className="h-5 w-5" />
                   <span className="sr-only">Toggle menu</span>
                 </Button>
               </SheetTrigger>
               <SheetContent side="top" className="h-64">
+                <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
                 <nav className="flex flex-col space-y-4 mt-6">
                   <Link
                     href="#route"

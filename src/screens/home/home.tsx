@@ -1,11 +1,11 @@
-import { BookingModal } from '@/components/booking-modal';
-
-import { DepartureScheduleSection } from '@/screens/home/components/departure-schedule/departure-schedule-section';
+import BenefitsTimeline from '@/screens/home/components/benefits-timeline';
+import BookingProcess from '@/screens/home/components/booking-process';
+import Schedule from '@/screens/home/components/departure-schedule/schedule';
 import { FaqSection } from '@/screens/home/components/faq-section';
+import Hero from '@/screens/home/components/hero-section';
 import { PartnersSection } from '@/screens/home/components/partners-section';
-// import { PriceSection } from '@/screens/home/components/price-section';
-import { RouteMapSection } from '@/screens/home/components/route-map-section';
-import { ServiceSection } from '@/screens/home/components/service-section';
+import RouteMapSection from '@/screens/home/components/route-map-section';
+import Testimonials from '@/screens/home/components/testimonials';
 
 export default function Home() {
   return (
@@ -16,56 +16,29 @@ export default function Home() {
       </div> */}
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center">
-        {/* Background Image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: "url('/images/moraine-lake-hero.webp",
-            backgroundBlendMode: 'overlay',
-          }}
-        >
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
-        </div>
+      <Hero />
 
-        {/* Content */}
-        <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            Experience the Wonder of Moraine Lake & Lake Louise
-          </h1>
-          <p className="text-xl md:text-2xl mb-10 max-w-2xl mx-auto font-light">
-            Explore the Lakes not the Parking Lot
-          </p>
-          <BookingModal />
-        </div>
-      </section>
+      {/* Benefits Timeline Section */}
+      <BenefitsTimeline />
 
-      {/* <section className="py-32 px-4 md:px-6 bg-[#FEFCFB] backdrop-blur-sm">
-        <FareHarborEmbed type="items" flowId="1343456" />
-      </section>
-
-      <section className="py-32 px-4 md:px-6 bg-[#FEFCFB] backdrop-blur-sm">
-        <FareHarborEmbed type="calendar" />
-      </section> */}
-
-      {/* Features Section */}
-      <ServiceSection />
-
-      {/* Departure Schedule Section */}
-      <DepartureScheduleSection />
+      {/* Booking Process Section */}
+      <BookingProcess />
 
       {/* Routes Section */}
       <RouteMapSection />
 
-      {/* Price Section
-      <PriceSection /> */}
+      {/* Departure Schedule Section */}
+      <Schedule />
+      {/* <DepartureScheduleSection /> */}
 
-      {/* Partners Section */}
-      <PartnersSection />
+      {/* Testimonial Section */}
+      <Testimonials />
 
       {/* FAQ Section */}
       <FaqSection />
+
+      {/* Partner Section */}
+      <PartnersSection />
     </main>
   );
 }

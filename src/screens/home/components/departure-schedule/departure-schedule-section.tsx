@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import {
   shuttle13Schedule,
   shuttle24Schedule,
-} from '@/screens/home/departure-schedule';
+} from '@/screens/home/components/departure-schedule';
 
 import { DepartureScheduleTable } from './departure-schedule-table';
 

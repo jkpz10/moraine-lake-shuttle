@@ -3,8 +3,8 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { Inter } from 'next/font/google';
 
+import Footer from '@/components/footer';
 import Navigation from '@/components/navigation';
-import { SiteFooter } from '@/components/site-footer';
 import { ThemeProvider } from '@/components/theme-provider';
 
 const geistSans = Geist({
@@ -43,7 +43,7 @@ export default function RootLayout({
         >
           <Navigation />
           {children}
-          <SiteFooter />
+          <Footer />
         </ThemeProvider>
 
         <script
