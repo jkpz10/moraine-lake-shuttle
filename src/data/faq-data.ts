@@ -5,52 +5,73 @@ export interface FaqItem {
 
 export const faqData: FaqItem[] = [
   {
-    question: 'What is the new Moraine Lake Commercial Vehicle Fee?',
+    question: 'How do I book the Moraine Lake & Lake Louise Shuttle?',
     answer:
-      "Starting in 2025, Parks Canada began applying fees to all commercial operators visiting Moraine Lake. Fees are charged to commercial operators on a per-trip basis, and are slightly over $300 for each bus trip we make. The revenue from the fees charged to commercial operators go directly to offsetting the cost of Parks Canada's traffic management in Lake Louise and Moraine Lake.",
-  },
-  {
-    question: 'Do you offer a Moraine Lake sunrise shuttle?',
-    answer:
-      "<b>Yes!</b> We provide 2 Moraine Lake sunrise shuttles every morning, at 4:00am and 5:05am. You can check the sunrise times for Moraine Lake <a href='https://www.timeanddate.com/sun/@6048483' class='text-[#034078] underline hover:text-[#034078]/80'>here</a>. Most guests like to arrive at Moraine Lake at least 1 hour before sunrise.<br/><br/>In late September and October, the 6:20am and 6:45am shuttle can also be used as a sunrise shuttle.",
+      'You can Choose Route 1 or Route 2.<br/><br/>Route 1 goes to Lake Louise 1st and Moraine Lake after.<br/><br/>Route 2 goes to Moraine Lake 1st and Lake Louise after.<br/><br/>You have 14 times slot to choose in each route. You can get your itinerary the way you want it.',
   },
   {
     question: 'Can I bring my pet?',
     answer:
-      'Animals are allowed on our Moraine Lake shuttle buses, but only if in a carrying case small enough to fit on your lap. Certified service animals of any size are allowed on our shuttle buses. Our policies mirror those of Parks Canada and Roam Transit.',
+      '1 Pet is allowed per passenger.<br/><br/>Pet price is as followed:<br/><br/>24lbs or less $35 lap seated with the owner.<br/><br/>25lbs or more $44.98 required a seat.<br/><br/>Disrupted pets will be turned away without refund.',
   },
   {
-    question: 'Are your prices one-way or round-trip?',
-    answer: 'Prices for the Moraine Lake shuttle are round-trip.',
-  },
-  {
-    question: 'How much time should I spend at Moraine Lake?',
+    question: 'Does Children Required Car seats?',
     answer:
-      "Many guests like to watch sunrise from the Rockpile and take the first shuttle back @7:15am for breakfast and a coffee in the Lake Louise Village.<br/><br/>Other visitors rent a canoe, or hike to Consolation Lakes, Eiffel Lake, Larch Valley, Sentinel Pass, or Wenkchemna Pass. The time for each of these activities varies greatly from activity to activity and person to person.<br/><br/>A terrific resource for information about hiking trails at Moraine Lake can be found <a href='https://www.travelbanffcanada.com/best-moraine-lake-hikes/' class='text-[#034078] underline hover:text-[#034078]/80'>here</a>.",
+      "No but recommended.<br/><br/>According to Alberta's Occupant Restraint Laws, specific exemptions exist for vehicles such as taxis, limousines, shuttle buses, and party buses. These vehicles are classified differently from personal cars and are not required to have car seats or even seat belts for every passenger. For example, the same law applies to school buses, where children can travel without seat belts. Occupant Restraint Laws",
   },
   {
-    question: 'Can I visit both lakes?',
+    question: 'Is infant free?',
     answer:
-      "<strong>Yes, we have 2 options for you:</strong><br/><br/>Option 1: We provide shuttles to Moraine Lake that include a 1-hour stop at Lake Louise Lakeshore en route to Moraine Lake. These are great for most visitors who just want to see the lake.<br/><br/>Option 2: Make two separate bookings for a 'Direct to Moraine Lake' and a 'Direct to Lake Louise' on the same day. These are perfect for the visitor who wants to hike or otherwise spend &gt;1 hour at each lake.",
+      'All ages are the same price. Infant can be in their stroller or carrier.<br/><br/>Parents will be responsible on there own baby carrier or stroller.<br/><br/>Car seat is not provided.',
   },
   {
-    question: 'What time of year can I visit Moraine Lake?',
+    question: 'Is there a Group discount?',
     answer:
-      'The Moraine Lake shuttle is operational from June 3, 2024 till October 14, 2024.<br/><br/>The Lake Louise shuttle is operational from June 14, 2024 till September 30, 2024.',
+      'Yes. Group discount as follows:<br/><br/>10-14 = 5%<br/><br/>15+ = 10%<br/><br/>Will automatically reflect on your total bill at check out and only done by booking directly to the website or calling the admin.',
   },
   {
-    question: 'How long does the shuttle to Moraine Lake take?',
+    question: 'Where to park and where to meet?',
     answer:
-      "An <strong>outbound</strong> trip on the Moraine Lake shuttle takes 40 minutes (25 minutes at sunrise).<br/><br/>The Moraine Lake shuttle <strong>return</strong> trip takes 25 minutes.<br/><br/>See our <a href='/rates' class='text-[#034078] underline hover:text-[#034078]/80'>Schedule & Rates</a> page for more information.",
+      'Park at the Lake Louise Ski resort & Summer Gondola located at 1 Whitehorn Rd, Lake Louise, AB T0L 1E0<br/><br/>Find the tour shuttle parking with our name and logo.<br/><br/>Checked in 15min before your departure time.<br/><br/>Shuttle will leave on time.',
   },
   {
-    question: 'Can I drive my personal vehicle to Moraine Lake?',
+    question: 'What if I missed my shuttle?',
     answer:
-      '<strong>No</strong>. Moraine Lake Road is closed to personal vehicles. To visit Moraine Lake, you must take a Moraine Lake shuttle bus.<br/><br/>However, visitors with a blue handicap hangtag will always be granted access to Moraine Lake and Lake Louise by Parks Canada.',
+      'You can ride with the next one but not guaranteed. Passenger on the specified time will be the priority.<br/><br/>Failure to checked in 15min prior to departure time. Your slot will be given to the chance passenger.<br/><br/>Be in the pick-up location 10-15min prior to departure time.',
   },
   {
-    question: 'Where can I park?',
+    question: 'What if my Shuttle is late?',
     answer:
-      "<strong>Sunrise</strong> (4am departure): Parking is at <a href='https://maps.app.goo.gl/PtLa5evdgwfgSLqW9' class='text-[#034078] underline hover:text-[#034078]/80'>Samson Mall</a>.<br/><br/><strong>After 6am:</strong> Parking is at the <a href='https://maps.app.goo.gl/ercRXCfqxsang8Jn8' class='text-[#034078] underline hover:text-[#034078]/80'>Lake Louise Summer Gondola</a>.<br/><br/><strong>Parking is free at both locations.</strong>",
+      "Most of the time shuttle arrived 10min prior to departure time.<br/><br/>In some instance we can't control the road traffic. Just be in the said pick location and the driver will announce the time slot what he/she is picking up and scan your ticket.",
+  },
+  {
+    question: 'How much time I can spend in the lakes?',
+    answer:
+      'You will be given about 100mins ample time to explore the wonder of the lakes.<br/><br/>Just be mind full of your departure time. To avoid missing your shuttle.',
+  },
+  {
+    question: 'What to do in the lakes?',
+    answer:
+      'Hiking to explore the wonders of the lakes.<br/><br/>taking postcards pictures background photos<br/><br/>Kayak.<br/><br/>Canoe.<br/><br/>Just be mind full on your departure time. To avoid missing your shuttle.',
+  },
+  {
+    question: 'Can I eat inside the shuttle?',
+    answer:
+      "Yes. But be mindful and respect other passengers. Avoid smell foods. don't litter, and be responsible to your garbage disposal.",
+  },
+  {
+    question: 'Can I smoke inside the shuttle?',
+    answer: 'NO!',
+  },
+  {
+    question: 'What if I/we changed our plan can we get a refund?',
+    answer:
+      'You can do a self cancellation on your reservation with in 72 HOURS prior on your departure and get a full REFUND.<br/><br/>After 72 Hours you can only change your schedule time slot on any available dates up to 48 HOURS prior on your schedule time.<br/><br/>Anything above mention there will be no refund. Ticket good as Sold.',
+  },
+  {
+    question:
+      'What if all schedule I preferred is fully booked? Do I still have a chance to booked on my preferred schedule?',
+    answer:
+      'You will be put on the waiting list on your desired schedule and will be prompted by email on or before 48 HOURS prior to your desired schedule.<br/><br/>Or you can go to the terminal for a chance passenger 15 min prior on your desired schedule but no guaranteed.',
   },
 ];

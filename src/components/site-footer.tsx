@@ -73,7 +73,7 @@ export function SiteFooter() {
       <div className="w-full py-12 px-4 md:px-6">
         <div className="flex flex-col md:flex-row gap-8">
           {/* Logo and Copyright */}
-          <div className="flex flex-col justify-center items-start space-y-4 flex-1">
+          <div className="hidden md:flex flex-col justify-center items-start space-y-4 flex-1">
             <Link
               href="/"
               className="flex items-center focus:outline-none focus:ring-2 focus:ring-primary rounded-md"
@@ -128,6 +128,29 @@ export function SiteFooter() {
                 />
               ))}
             </div>
+          </div>
+
+          {/* Logo and Copyright mobile */}
+          <div className="flex md:hidden flex-col justify-center items-center space-y-4 flex-1">
+            <Link
+              href="/"
+              className="flex items-center focus:outline-none focus:ring-2 focus:ring-primary rounded-md"
+              tabIndex={0}
+            >
+              <div className="relative h-28 w-52">
+                <Image
+                  src="/logo/mlls-logo.png"
+                  alt="Moraine Lake Louise Shuttle Logo"
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
+            </Link>
+            <p className="text-sm text-muted-foreground">
+              Copyright &copy; {currentYear} Moraine Lake Louise Shuttle. All
+              rights reserved.
+            </p>
           </div>
         </div>
       </div>
