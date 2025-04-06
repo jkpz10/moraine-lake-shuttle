@@ -35,9 +35,6 @@ export default function Home() {
 
       {/* Partner Section */}
       <PartnersSection />
-
-      {/* FAQ Section */}
-      <FaqSection />
     </main>
   );
 }
