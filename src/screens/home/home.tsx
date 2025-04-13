@@ -24,7 +24,6 @@ export default function Home() {
       {/* Booking Process Section */}
       <BookingProcess />
 
-      {/* Routes Section */}
       <RouteMapSection />
 
       {/* Departure Schedule Section */}

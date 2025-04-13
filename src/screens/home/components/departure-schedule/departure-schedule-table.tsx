@@ -35,14 +35,17 @@ export function DepartureScheduleTable({
       <Table className="overflow-hidden">
         <TableHeader>
           <TableRow>
-            <TableHead className="w-[33%] font-medium bg-[#001F54] text-[#FEFCFB] rounded-tl-xl p-3">
-              Ski Gondola
+            <TableHead className="w-[25%] text-center font-medium bg-[#001F54] text-[#FEFCFB] rounded-tl-xl p-3">
+              Hi Lake Loiuse
             </TableHead>
-            <TableHead className="w-[33%] font-medium bg-[#001F54] text-[#FEFCFB] p-3">
-              {reversed ? 'Moraine Lake' : 'Lake Louise'}
+            <TableHead className="w-[25%] text-center font-medium bg-[#001F54] text-[#FEFCFB] p-3">
+              {reversed ? 'Moraine Lake Parking' : 'Lake Louise Parking'}
             </TableHead>
-            <TableHead className="w-[33%] font-medium bg-[#001F54] text-[#FEFCFB] rounded-tr-xl p-3">
-              {reversed ? 'Lake Louise' : 'Moraine Lake'}
+            <TableHead className="w-[25%] text-center font-medium bg-[#001F54] text-[#FEFCFB] p-3">
+              {reversed ? 'Lake Louise Parking' : 'Moraine Lake Parking'}
+            </TableHead>
+            <TableHead className="w-[25%] text-center font-medium bg-[#001F54] text-[#FEFCFB] rounded-tr-xl p-3">
+              End Time
             </TableHead>
           </TableRow>
         </TableHeader>
@@ -60,14 +63,17 @@ export function DepartureScheduleTable({
                 hover:bg-gray-100 hover:shadow-sm hover:scale-[1.02] cursor-pointer
               `}
               >
-                <TableCell className="font-mono">
+                <TableCell className="font-mono text-center">
                   {schedule.skiGondola}
                 </TableCell>
-                <TableCell className="font-mono">
+                <TableCell className="font-mono text-center">
                   {reversed ? schedule.moraineLake : schedule.lakeLouise}
                 </TableCell>
-                <TableCell className="font-mono">
+                <TableCell className="font-mono text-center">
                   {reversed ? schedule.lakeLouise : schedule.moraineLake}
+                </TableCell>
+                <TableCell className="font-mono text-center">
+                  {schedule.endTime}
                 </TableCell>
               </TableRow>
             );
