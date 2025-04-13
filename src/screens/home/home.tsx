@@ -4,6 +4,7 @@ import Schedule from '@/screens/home/components/departure-schedule/schedule';
 import { FaqSection } from '@/screens/home/components/faq-section';
 import Hero from '@/screens/home/components/hero-section';
 import { PartnersSection } from '@/screens/home/components/partners-section';
+import RouteMapSection from '@/screens/home/components/route-map-section';
 import Testimonials from '@/screens/home/components/testimonials';
 
 export default function Home() {
@@ -22,6 +23,8 @@ export default function Home() {
 
       {/* Booking Process Section */}
       <BookingProcess />
+
+      <RouteMapSection />
 
       {/* Departure Schedule Section */}
       <Schedule />
