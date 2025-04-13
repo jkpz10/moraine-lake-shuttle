@@ -1,6 +1,8 @@
+import { FlatCompat } from '@eslint/eslintrc';
+import prettierConfig from 'eslint-config-prettier';
+import importHelpersPlugin from 'eslint-plugin-import-helpers';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
-import { FlatCompat } from '@eslint/eslintrc';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -12,6 +14,10 @@ const compat = new FlatCompat({
 const eslintConfig = [
   ...compat.extends('next/core-web-vitals', 'next/typescript'),
   {
+    languageOptions: {},
+    plugins: {
+      'import-helpers': importHelpersPlugin,
+    },
     rules: {
       'newline-before-return': 2,
       'react/prop-types': 0,
@@ -53,6 +59,7 @@ const eslintConfig = [
       ],
     },
   },
+  prettierConfig,
 ];
 
 export default eslintConfig;

@@ -1,0 +1,19 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Check if commit message follows conventional commit format
+commit_msg_file=$1
+commit_msg=$(cat "$commit_msg_file")
+
+# Regex pattern for conventional commits
+# format: <type>[(scope)]: <description>
+# Example: feat(auth): add login page
+pattern="^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)(\([a-z-]+\))?: .+$"
+
+if ! [[ "$commit_msg" =~ $pattern ]]; then
+  echo "Error: Commit message does not follow the conventional commit format."
+  echo "Format should be: <type>[(scope)]: <description>"
+  echo "Examples: feat(auth): add login page, fix: correct header styles"
+  echo "Types: feat, fix, docs, style, refactor, perf, test, build, ci, chore, revert"
+  exit 1
+fi 

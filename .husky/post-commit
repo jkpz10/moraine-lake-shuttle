@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "✅ Committed successfully following the project's code standards!"
+
+# Uncomment to run tests after commit if you have them set up
+# echo "Running tests..."
+# npm test 

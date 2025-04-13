@@ -1,5 +1,6 @@
 'use client';
 
+import { Badge } from '@/components/ui/badge';
 import {
   Table,
   TableBody,
@@ -8,8 +9,8 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
-import { Badge } from '@/components/ui/badge';
-import type { ScheduleTime } from '@/screens/home/departure-schedule';
+
+import type { ScheduleTime } from '@/screens/home/components/departure-schedule';
 
 interface ScheduleTableProps {
   data: ScheduleTime[];
@@ -22,7 +23,7 @@ export function DepartureScheduleTable({
   reversed = false,
   colors = ['bg-gray-200/50'],
 }: ScheduleTableProps) {
-  const shuttleNumbers = Array.from(new Set(data.map((item) => item.shuttle)));
+  const shuttleNumbers = Array.from(new Set(data.map(item => item.shuttle)));
 
   const route1 =
     'https://fareharbor.com/embeds/book/morainelakelouise/items/611572/?full-items=yes&flow=1343456';
@@ -30,7 +31,7 @@ export function DepartureScheduleTable({
     'https://fareharbor.com/embeds/book/morainelakelouise/items/611579/?full-items=yes&flow=1343456';
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 shadow-md rounded-xl pt-0 pb-4 bg-white">
       <Table className="overflow-hidden">
         <TableHeader>
           <TableRow>
@@ -48,12 +49,13 @@ export function DepartureScheduleTable({
         <TableBody>
           {data.map((schedule, index) => {
             const href = reversed ? route2 : route1;
+
             return (
               <TableRow
                 key={index}
                 onClick={() => window.open(href, '_blank')}
                 className={`
-                ${index % 2 === 0 ? colors[0] : colors[1] ?? ''}
+                ${index % 2 === 0 ? colors[0] : (colors[1] ?? '')}
                 transition-all duration-300 ease-in-out 
                 hover:bg-gray-100 hover:shadow-sm hover:scale-[1.02] cursor-pointer
               `}
@@ -72,13 +74,13 @@ export function DepartureScheduleTable({
           })}
         </TableBody>
       </Table>
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap gap-2 ml-2">
         {shuttleNumbers.map((number, index) => (
           <Badge
             key={number}
             variant="secondary"
             className={`text-sm
-              ${index % 2 === 0 ? colors[0] : colors[1] ?? ''}
+              ${index % 2 === 0 ? colors[0] : (colors[1] ?? '')}
               transition-all duration-300 ease-in-out 
               hover:bg-gray-100 hover:shadow-sm hover:scale-[1.02] cursor-pointer
             `}

@@ -1,15 +1,17 @@
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+
 import {
   shuttle13Schedule,
   shuttle24Schedule,
-} from '@/screens/home/departure-schedule';
+} from '@/screens/home/components/departure-schedule';
+
 import { DepartureScheduleTable } from './departure-schedule-table';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export function DepartureScheduleSection() {
   return (
     <section
       id="schedule"
-      className="py-32 px-4 md:px-6 bg-[#034078] text-[#FEFCFB]"
+      className="py-24 px-4 md:px-6 bg-[#034078] text-[#FEFCFB]"
     >
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold text-center mb-12">
