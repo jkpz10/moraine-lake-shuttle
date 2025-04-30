@@ -1,6 +1,6 @@
 'use client';
 
-import { Clock, DollarSign, Shield, ThumbsUp } from 'lucide-react';
+import { Clock, DollarSign, HandCoins, Shield } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 
@@ -16,12 +16,11 @@ const benefits = [
   },
   {
     icon: <DollarSign className="h-8 w-8 text-[#0B3D7A]" />,
-    title: 'Budget-Friendly Shuttles',
-    description:
-      'Affordable and reliable transportation without compromising quality',
-    stat: 4,
+    title: 'Pet-Friendly Shuttles',
+    description: 'Pets are welcome to board',
+    stat: null,
     unit: '',
-    statDescription: 'Shuttles available',
+    statDescription: '',
   },
   {
     icon: <Shield className="h-8 w-8 text-[#0B3D7A]" />,
@@ -33,18 +32,18 @@ const benefits = [
     statDescription: 'on-time rate',
   },
   {
-    icon: <ThumbsUp className="h-8 w-8 text-[#0B3D7A]" />,
-    title: 'Eco-Friendly',
+    icon: <HandCoins className="h-8 w-8 text-[#0B3D7A]" />,
+    title: 'Affordable Rates',
     description:
-      'Reduce your carbon footprint by choosing shared transportation to this pristine natural area.',
-    stat: 4200,
-    unit: 'kg',
-    statDescription: 'CO₂ saved monthly',
+      'Affordable rates for a premium experience. Enjoy the beauty of Moraine Lake without breaking the bank.',
+    stat: 44,
+    unit: '.98 CAD$',
+    statDescription: '',
   },
 ];
 
 interface CountUpProps {
-  end: number;
+  end?: number;
   duration?: number;
   unit?: string;
 }
@@ -66,7 +65,7 @@ const CountUp = ({ end, duration = 2000, unit = '' }: CountUpProps) => {
         const progress = timestamp - startTime;
         const percentage = Math.min(progress / duration, 1);
 
-        setCount(Math.floor(percentage * end));
+        setCount(Math.floor(percentage * (end ?? 0)));
 
         if (percentage < 1) {
           animationFrame = requestAnimationFrame(animate);
@@ -85,7 +84,7 @@ const CountUp = ({ end, duration = 2000, unit = '' }: CountUpProps) => {
 
   return (
     <span ref={ref}>
-      {count}
+      {count ? count : ''}
       {unit}
     </span>
   );
@@ -118,7 +117,10 @@ export default function BenefitsTimeline() {
                   <p className="text-gray-600 mb-4">{benefit.description}</p>
                   <div className="flex items-baseline">
                     <span className="text-3xl font-bold text-[#0B3D7A] mr-2">
-                      <CountUp end={benefit.stat} unit={benefit.unit} />
+                      <CountUp
+                        end={benefit.stat ?? undefined}
+                        unit={benefit.unit}
+                      />
                     </span>
                     <span className="text-gray-500">
                       {benefit.statDescription}

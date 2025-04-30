@@ -29,8 +29,8 @@ const routes: Route[] = [
     name: 'Route 1',
     stops: [
       {
-        name: 'Hi Lake Louise',
-        description: 'Main pickup point',
+        name: 'Samson Mall',
+        description: 'Main pickup point at Samson Mall',
         times: [
           '7:00 AM',
           '7:45 AM',
@@ -92,8 +92,8 @@ const routes: Route[] = [
         coordinates: { x: 50, y: 80 },
       },
       {
-        name: 'End Village',
-        description: 'End Drop off point at lake louise',
+        name: 'End Samson Mall',
+        description: 'End Drop off point at Samson Mall',
         times: [
           '11:15 AM',
           '12:00 PM',
@@ -119,8 +119,8 @@ const routes: Route[] = [
     name: 'Route 2',
     stops: [
       {
-        name: 'Hi Lake Louise',
-        description: 'Main pickup point at Lake Louise',
+        name: 'Samson Mall',
+        description: 'Main pickup point at Samson Mall',
         times: [
           '7:00 AM',
           '7:45 AM',
@@ -182,8 +182,8 @@ const routes: Route[] = [
         coordinates: { x: 50, y: 80 },
       },
       {
-        name: 'End Village',
-        description: 'End Drop off point at lake louise',
+        name: 'End Samson Mall',
+        description: 'End Drop off point at Samson Mall',
         times: [
           '11:15 AM',
           '12:00 PM',
