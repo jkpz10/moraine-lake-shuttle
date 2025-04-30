@@ -13,19 +13,36 @@ export default function HeroSection() {
     seconds: 0,
   });
 
-  // Set countdown to a date 7 days from now
   useEffect(() => {
-    const targetDate = new Date();
-    targetDate.setDate(targetDate.getDate() + 7);
-
-    const interval = setInterval(() => {
+    const calculateTargetDate = () => {
       const now = new Date();
+      const currentYear = now.getFullYear();
+      const septTarget = new Date(currentYear, 8, 1); // September 1st (month is 0-indexed)
+
+      // If we're between January 1st and September 1st, target is September 1st this year
+      // If we're after September 1st, target is January 1st next year
+      if (now > septTarget) {
+        return new Date(currentYear + 1, 0, 1); // January 1st next year
+      } else {
+        return septTarget; // September 1st this year
+      }
+    };
+
+    const updateCountdown = () => {
+      const now = new Date();
+      const targetDate = calculateTargetDate();
       const difference = targetDate.getTime() - now.getTime();
 
       if (difference <= 0) {
-        clearInterval(interval);
+        // Recalculate target date if countdown ended
+        const newTargetDate = calculateTargetDate();
 
-        return;
+        // If new target date is in the future, update countdown
+        if (newTargetDate > now) {
+          updateCountdown();
+
+          return;
+        }
       }
 
       const days = Math.floor(difference / (1000 * 60 * 60 * 24));
@@ -36,7 +53,13 @@ export default function HeroSection() {
       const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
       setTimeLeft({ days, hours, minutes, seconds });
-    }, 1000);
+    };
+
+    // Initial calculation
+    updateCountdown();
+
+    // Set up interval
+    const interval = setInterval(updateCountdown, 1000);
 
     return () => clearInterval(interval);
   }, []);

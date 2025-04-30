@@ -130,7 +130,7 @@ export default function Footer() {
                   href="tel:+14035551234"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  (403) 555-1234
+                  +1-888-667-2463
                 </Link>
               </li>
               <li className="flex items-center gap-3">

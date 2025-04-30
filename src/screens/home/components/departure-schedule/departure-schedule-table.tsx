@@ -36,7 +36,7 @@ export function DepartureScheduleTable({
         <TableHeader>
           <TableRow>
             <TableHead className="w-[25%] text-center font-medium bg-[#001F54] text-[#FEFCFB] rounded-tl-xl p-3">
-              Hi Lake Loiuse
+              Samson Mall
             </TableHead>
             <TableHead className="w-[25%] text-center font-medium bg-[#001F54] text-[#FEFCFB] p-3">
               {reversed ? 'Moraine Lake Parking' : 'Lake Louise Parking'}
