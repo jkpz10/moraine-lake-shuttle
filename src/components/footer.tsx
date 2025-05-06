@@ -119,18 +119,18 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-[#F2994A] mt-0.5" />
                 <span className="text-gray-400">
-                  224 Banff Avenue
+                  Unit 2 3935 3a St.
                   <br />
-                  Banff, AB T1L 1A7
+                  Ne Calgary AB, T2E 6S7
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-[#F2994A]" />
                 <Link
-                  href="tel:+14035551234"
+                  href="tel:+1-888-316-6724"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  +1-888-667-2463
+                  +1-888-316-6724
                 </Link>
               </li>
               <li className="flex items-center gap-3">
@@ -139,7 +139,7 @@ export default function Footer() {
                   href="mailto:info@mountainshuttle.com"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  info@morainelakelouise.com
+                  info@morainelakelouiseshuttle.com
                 </Link>
               </li>
             </ul>
