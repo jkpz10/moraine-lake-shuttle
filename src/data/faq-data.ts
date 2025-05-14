@@ -30,11 +30,6 @@ export const faqData: FaqItem[] = [
       'Yes. Group discount as follows:<br/><br/>10-14 = 5%<br/><br/>15+ = 10%<br/><br/>Will automatically reflect on your total bill at check out and only done by booking directly to the website or calling the admin.',
   },
   {
-    question: 'Where to park and where to meet?',
-    answer:
-      'Park at the Lake Louise Ski resort & Summer Gondola located at 1 Whitehorn Rd, Lake Louise, AB T0L 1E0<br/><br/>Find the tour shuttle parking with our name and logo.<br/><br/>Checked in 15min before your departure time.<br/><br/>Shuttle will leave on time.',
-  },
-  {
     question: 'What if I missed my shuttle?',
     answer:
       'You can ride with the next one but not guaranteed. Passenger on the specified time will be the priority.<br/><br/>Failure to checked in 15min prior to departure time. Your slot will be given to the chance passenger.<br/><br/>Be in the pick-up location 10-15min prior to departure time.',
@@ -47,7 +42,7 @@ export const faqData: FaqItem[] = [
   {
     question: 'How much time I can spend in the lakes?',
     answer:
-      'You will be given about 100mins ample time to explore the wonder of the lakes.<br/><br/>Just be mind full of your departure time. To avoid missing your shuttle.',
+      'You will be given about 90mins ample time to explore the wonder of the lakes.<br/><br/>Just be mind full of your departure time. To avoid missing your shuttle.',
   },
   {
     question: 'What to do in the lakes?',
