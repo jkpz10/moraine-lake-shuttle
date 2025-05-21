@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { Inter } from 'next/font/google';
+import Script from 'next/script';
 
 import Footer from '@/components/footer';
 import Navigation from '@/components/navigation';
@@ -50,6 +51,19 @@ export default function RootLayout({
           src="https://fareharbor.com/embeds/api/v1/?autolightframe=yes"
           async
         />
+
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=GTM-P93GQPMB"
+          strategy="afterInteractive" // Or "lazyOnLoad" for optimal loading
+        />
+        <Script id="google-analytics">
+          {`
+             window.dataLayer = window.dataLayer || [];
+             function gtag(){dataLayer.push(arguments);}
+             gtag('js', new Date());
+             gtag('config', 'GTM-P93GQPMB');
+           `}
+        </Script>
       </body>
     </html>
   );
