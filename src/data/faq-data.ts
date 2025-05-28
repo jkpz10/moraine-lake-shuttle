@@ -69,9 +69,9 @@ export const faqData: FaqItem[] = [
     answer:
       'You will be put on the waiting list on your desired schedule and will be prompted by email on or before 48 HOURS prior to your desired schedule.<br/><br/>Or you can go to the terminal for a chance passenger 15 min prior on your desired schedule but no guaranteed.',
   },
-  {
-    question: 'WHERE CAN I PARK MY VEHICLE? ',
-    answer:
-      'Free park at the overflow parking at Lake Louise summer gondola and their are free ride for parks canada going to samson mall. Just check their time slot.',
-  },
+  // {
+  //   question: 'WHERE CAN I PARK MY VEHICLE? ',
+  //   answer:
+  //     'Free park at the overflow parking at Lake Louise summer gondola and their are free ride for parks canada going to samson mall. Just check their time slot.',
+  // },
 ];
