@@ -1,6 +1,7 @@
+import './globals.css';
+import { Analytics } from '@vercel/analytics/next';
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
-import './globals.css';
 import { Inter } from 'next/font/google';
 import Script from 'next/script';
 
@@ -64,6 +65,7 @@ export default function RootLayout({
              gtag('config', 'GTM-P93GQPMB');
            `}
         </Script>
+        <Analytics />
       </body>
     </html>
   );
