@@ -36,8 +36,8 @@ const benefits = [
     title: 'Affordable Rates',
     description:
       'Affordable rates for a premium experience. Enjoy the beauty of Moraine Lake without breaking the bank.',
-    stat: 44,
-    unit: '.98 CAD$',
+    stat: 30,
+    unit: '.00 CAD$ - $88.00 CAD$',
     statDescription: '',
   },
 ];
