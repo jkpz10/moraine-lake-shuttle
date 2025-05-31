@@ -4,7 +4,7 @@ import { Clock, MapPin } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Tabs, TabsContent } from '@/components/ui/tabs';
 
 interface Coordinates {
   x: number;
@@ -14,7 +14,7 @@ interface Coordinates {
 interface Stop {
   name: string;
   description: string;
-  times: string[];
+  times?: string[];
   coordinates: Coordinates;
 }
 
@@ -29,177 +29,34 @@ const routes: Route[] = [
     name: 'Route 1',
     stops: [
       {
-        name: 'Samson Mall',
-        description: 'Main pickup point at Samson Mall',
+        name: 'Banff Train station',
+        description:
+          'Main pickup point at Banff Train station, ETA 1 hour drive to Lake Louise',
         times: [
           '7:00 AM',
-          '7:45 AM',
-          '8:30 AM',
-          '9:15 AM',
-          '10:00 AM',
-          '10:45 AM',
-          '11:30 AM',
-          '12:15 PM',
-          '1:00 PM',
-          '1:45 PM',
-          '2:30 PM',
-          '3:15 PM',
-          '4:00 PM',
-          '4:45 PM',
-        ],
-        coordinates: { x: 20, y: 30 },
-      },
-      {
-        name: 'Lake Louise Parking',
-        description: 'Pickup at the Lake Louise',
-        times: [
-          '8:50 AM',
-          '9:35 AM',
-          '10:20 AM',
-          '11:05 AM',
-          '11:50 AM',
-          '12:35 PM',
-          '1:20 PM',
-          '2:05 PM',
-          '2:50 PM',
-          '3:35 PM',
-          '4:20 PM',
-          '5:05 PM',
-          '5:50 PM',
-          '6:35 PM',
-        ],
-        coordinates: { x: 80, y: 25 },
-      },
-      {
-        name: 'Moraine Lake Parking',
-        description: 'Pickup at the Moraine Lake Parking',
-        times: [
-          '10:50 AM',
-          '11:35 AM',
-          '12:20 PM',
-          '1:05 PM',
-          '1:50 PM',
-          '2:35 PM',
-          '3:20 PM',
-          '4:05 PM',
-          '4:50 PM',
-          '5:35 PM',
-          '6:20 PM',
-          '7:05 PM',
-          '7:50 PM',
-          '8:35 PM',
-        ],
-        coordinates: { x: 50, y: 80 },
-      },
-      {
-        name: 'End Samson Mall',
-        description: 'End Drop off point at Samson Mall',
-        times: [
-          '11:15 AM',
-          '12:00 PM',
-          '12:45 PM',
-          '1:30 PM',
-          '2:15 PM',
-          '3:00 PM',
-          '3:45 PM',
-          '4:30 PM',
-          '5:15 PM',
-          '6:00 PM',
-          '6:45 PM',
-          '7:30 PM',
-          '8:15 PM',
-          '9:00 PM',
-        ],
-        coordinates: { x: 24, y: 55 },
-      },
-    ],
-  },
-  {
-    id: 'route2',
-    name: 'Route 2',
-    stops: [
-      {
-        name: 'Samson Mall',
-        description: 'Main pickup point at Samson Mall',
-        times: [
-          '7:00 AM',
-          '7:45 AM',
-          '8:30 AM',
-          '9:15 AM',
-          '10:00 AM',
-          '10:45 AM',
-          '11:30 AM',
-          '12:15 PM',
-          '1:00 PM',
-          '1:45 PM',
-          '2:30 PM',
-          '3:15 PM',
-          '4:00 PM',
-          '4:45 PM',
-        ],
-        coordinates: { x: 20, y: 30 },
-      },
-      {
-        name: 'Moraine Lake Parking',
-        description: 'Pickup at Moraine Lake Parking',
-        times: [
+          '8:00 AM',
           '9:00 AM',
-          '9:45 AM',
-          '10:30 AM',
-          '11:15 AM',
-          '12:00 PM',
-          '12:45 PM',
-          '1:30 PM',
-          '2:15 PM',
+          '1:00 PM',
+          '2:00 PM',
           '3:00 PM',
-          '3:45 PM',
-          '4:30 PM',
-          '5:15 PM',
-          '6:00 PM',
-          '6:45 PM',
         ],
+        coordinates: { x: 20, y: 30 },
+      },
+      {
+        name: 'Moraine Lake',
+        description:
+          'Pickup at the Moraine Lake, ETA 25 minutes drive to Lake Louise',
         coordinates: { x: 80, y: 25 },
       },
       {
-        name: 'Lake Louise Parking',
-        description: 'Pickup at Moraine Lake Parking',
-        times: [
-          '11:00 AM',
-          '11:45 AM',
-          '12:30 PM',
-          '1:15 PM',
-          '2:00 PM',
-          '2:45 PM',
-          '3:30 PM',
-          '4:15 PM',
-          '5:00 PM',
-          '5:45 PM',
-          '6:30 PM',
-          '7:15 PM',
-          '8:00 PM',
-          '8:45 PM',
-        ],
+        name: 'Lake Louise',
+        description:
+          'Pickup at the Lake Louise, ETA 1 hour drive to Banff Train Station',
         coordinates: { x: 50, y: 80 },
       },
       {
-        name: 'End Samson Mall',
-        description: 'End Drop off point at Samson Mall',
-        times: [
-          '11:15 AM',
-          '12:00 PM',
-          '12:45 PM',
-          '1:30 PM',
-          '2:15 PM',
-          '3:00 PM',
-          '3:45 PM',
-          '4:30 PM',
-          '5:15 PM',
-          '6:00 PM',
-          '6:45 PM',
-          '7:30 PM',
-          '8:15 PM',
-          '9:00 PM',
-        ],
+        name: 'End Banff Train Station',
+        description: 'End Drop off point at Banff Train Station',
         coordinates: { x: 24, y: 55 },
       },
     ],
@@ -207,17 +64,17 @@ const routes: Route[] = [
 ];
 
 export function RouteMapSection() {
-  const [, setActiveRoute] = useState<Route>(routes[1]);
-  const [activeStop, setActiveStop] = useState<Stop | null>(null);
+  // const [, setActiveRoute] = useState<Route>(routes[1]);
+  const [activeStop, setActiveStop] = useState<Stop | null>(routes[0].stops[0]);
 
   const handleStopClick = (stop: Stop) => {
     setActiveStop(stop);
   };
 
-  const handleRouteChange = (route: Route) => {
-    setActiveRoute(route);
-    setActiveStop(null);
-  };
+  // const handleRouteChange = (route: Route) => {
+  //   setActiveRoute(route);
+  //   setActiveStop(null);
+  // };
 
   return (
     <section id="route" className="py-24 bg-white">
@@ -233,7 +90,7 @@ export function RouteMapSection() {
         </div>
 
         <Tabs defaultValue="route1" className="max-w-4xl mx-auto">
-          <TabsList className="grid w-full grid-cols-2 mb-8">
+          {/* <TabsList className="grid w-full grid-cols-2 mb-8">
             {routes.map(route => (
               <TabsTrigger
                 key={route.id}
@@ -243,7 +100,7 @@ export function RouteMapSection() {
                 {route.name}
               </TabsTrigger>
             ))}
-          </TabsList>
+          </TabsList> */}
 
           {routes.map(route => (
             <TabsContent key={route.id} value={route.id} className="mt-0">
@@ -302,7 +159,7 @@ export function RouteMapSection() {
                 {/* Info card for active stop */}
                 {activeStop && (
                   <div
-                    className="absolute right-4 top-4 w-64 bg-white rounded-lg shadow-lg p-4 z-10"
+                    className="absolute right-4 bottom-4 w-64 bg-white rounded-lg shadow-lg p-4 z-10"
                     style={{
                       animation: 'fadeIn 0.3s ease-out',
                     }}
@@ -328,7 +185,7 @@ export function RouteMapSection() {
                           Departure Times:
                         </p>
                         <div className="flex flex-wrap gap-1">
-                          {activeStop.times.map((time, i) => (
+                          {activeStop?.times?.map((time, i) => (
                             <span
                               key={i}
                               className="text-xs bg-[#F5F7FA] px-2 py-0.5 rounded"

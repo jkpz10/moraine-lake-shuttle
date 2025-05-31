@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 import {
   shuttle13Schedule,
-  shuttle24Schedule,
+  // shuttle24Schedule,
 } from '@/screens/home/components/departure-schedule';
 
 import { DepartureScheduleTable } from './departure-schedule-table';
@@ -47,34 +47,18 @@ export default function Schedule() {
           </div> */}
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 gap-12">
           <div className="space-y-4">
             <Card className="border-none bg-transparent shadow-none">
               <CardHeader>
                 <CardTitle className="text-xl font-semibold text-[#0A1128]">
-                  Route 1 Departure Time
+                  Shuttle Departure Time
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <DepartureScheduleTable
                   data={shuttle13Schedule}
                   colors={['bg-yellow-500/50', 'bg-red-500/50']}
-                />
-              </CardContent>
-            </Card>
-          </div>
-          <div className="space-y-4">
-            <Card className="border-none bg-transparent shadow-none">
-              <CardHeader>
-                <CardTitle className="text-xl font-semibold text-[#0A1128]">
-                  Route 2 Departure Time
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <DepartureScheduleTable
-                  data={shuttle24Schedule}
-                  colors={['bg-blue-50', 'bg-blue-500/50']}
-                  reversed
                 />
               </CardContent>
             </Card>
