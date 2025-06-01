@@ -43,15 +43,15 @@ const routes: Route[] = [
         coordinates: { x: 20, y: 30 },
       },
       {
-        name: 'Moraine Lake',
+        name: 'Lake Louise',
         description:
-          'Pickup at the Moraine Lake, ETA 25 minutes drive to Lake Louise',
+          'Pickup at the Lake Louise, ETA 25 minutes drive to Moraine Lake',
         coordinates: { x: 80, y: 25 },
       },
       {
-        name: 'Lake Louise',
+        name: 'Moraine Lake',
         description:
-          'Pickup at the Lake Louise, ETA 1 hour drive to Banff Train Station',
+          'Pickup at the Moraine Lake, ETA 1 hour drive to Banff Train Station',
         coordinates: { x: 50, y: 80 },
       },
       {

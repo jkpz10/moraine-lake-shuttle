@@ -26,7 +26,7 @@ export function DepartureScheduleTable({
   // const shuttleNumbers = Array.from(new Set(data.map(item => item.shuttle)));
 
   const route1 =
-    'https://fareharbor.com/embeds/book/morainelakelouise/items/611572/?full-items=yes&flow=1343456';
+    'https://fareharbor.com/embeds/book/morainelakelouise/?full-items=yes';
   // const route2 =
   //   'https://fareharbor.com/embeds/book/morainelakelouise/items/611579/?full-items=yes&flow=1343456';
 
